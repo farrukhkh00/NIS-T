@@ -71,3 +71,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopButton = document.getElementById('scrollToTop');
+  
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) { // Change 300 to the scroll position at which the button should appear
+        scrollToTopButton.classList.add('show');
+      } else {
+        scrollToTopButton.classList.remove('show');
+      }
+    });
+  
+    // Scroll to top on button click
+    scrollToTopButton.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+  
