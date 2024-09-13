@@ -1,4 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+html{
+    scroll-behavior:smooth;
+}
 
 @media (max-width : 640px) {
     body h1,h2,h3 {
@@ -43,6 +46,14 @@
 .navbar-left, .navbar-right {
     flex: 0 0 auto;
 }
+@media (max-width:768px) {
+    .bootstrap_img{
+        display: none !important
+    }
+    .farrukh{
+        margin-left: 4% !important
+    }
+}
 
 
 /* Hero section */
@@ -55,6 +66,7 @@
 .hero-img {
     max-width: 100%;
     height: auto;
+    animation: move-vertical 10s linear infinite;
 }
 
 .hero-text {
@@ -63,6 +75,8 @@
     justify-content: center;
     text-align: left;
     color: white;
+
+    
 }
 
 .hero-text h1 {
@@ -107,6 +121,19 @@
 } 
 marquee img {
     margin-right: 150px; 
+}
+
+
+@keyframes move-vertical {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(12%); /* Adjust the percentage as needed */
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
@@ -247,7 +274,6 @@ marquee img {
 }
 
 
-
 /* Team section */
 .team_sec {
     
@@ -262,6 +288,7 @@ margin-right: 15px; /* Space between image and heading */
 .img-wrapper img {
 border-radius: 50%;
 }
+
 
 /* Pricing container */
 .pricing-container {
@@ -519,10 +546,8 @@ form.example::after {
 }
 
 
-
 /* testimonials */
 .mySlides { display: none; }
-    
     .carousel-container {
       position: relative;
       margin: 0 auto; /* Centers the carousel horizontally */
@@ -541,7 +566,7 @@ form.example::after {
     }
 
 
-
+    /* All hr */
     .styled-hr {
         border: none;
         height: 3px;
